@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>200 Level Loading</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a3203 0%, #0d5c04 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .faculty-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .side-logo {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+      border: 3px solid #043707;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(135deg, #043707 0%, #0a5c0e 100%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .faculty-text {
+      flex-grow: 1;
+      margin: 0 20px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .main-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .logo-box {
+      display: inline-block;
+      background: linear-gradient(135deg, #043707 0%, #0a5c0e 100%); 
+      padding: 10px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #032a05;
+    }
+    
+    .logo {
+      width: 120px;
+      height: auto;
+      display: block;
+    } 
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 10px 0;
+      color: #222;
+      font-weight: 600;
+    }
+
+    .typing-container {
+      position: relative;
+      margin: 15px 0;
+    }
+
+    .typing-text {
+      color: #043707;
+      font-size: 1.6rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #043707;
+      width: 0;
+      display: inline-block;
+    }
+
+    .first-line {
+      animation: typing-first 4s steps(40, end) infinite, 
+                 blink-caret 0.75s step-end infinite;
+    }
+
+    .second-line {
+      animation: typing-second 4s steps(40, end) infinite, 
+                 blink-caret 0.75s step-end infinite;
+      animation-delay: 4s;
+    }
+
+    @keyframes typing-first {
+      0% { width: 0 }
+      20% { width: 100% }
+      40% { width: 100% }
+      60% { width: 0 }
+      100% { width: 0 }
+    }
+
+    @keyframes typing-second {
+      0% { width: 0 }
+      20% { width: 100% }
+      40% { width: 100% }
+      60% { width: 0 }
+      100% { width: 0 }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #043707 }
+    }
+
+    .big-text {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #043707;
+      margin: 15px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .loading {
+      color: #1c64c9;
+      font-size: 1.4rem;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+
+    .loading span {
+      color: rgba(165, 3, 3, 0.969);
+      font-weight: bold;
+    }
+
+    .congrats {
+      color: #0c800c;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: rgba(12, 128, 12, 0.1);
+    }
+ 
+    .credit {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #333;
+      font-style: italic;
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="faculty-card">
+    <img src="SSU LOGO.jpg" alt="Left Logo" class="side-logo pulse">
+    <div class="faculty-text">
+      <div class="typing-container">
+        <h1 class="typing-text first-line">FACULTY OF COMPUTING</h1>
+      </div>
+      <div class="typing-container">
+        <h1 class="typing-text second-line">Dept of Computer Science</h1>
+      </div>
+    </div>
+    <img src="SSU LOGO.jpg" alt="Right Logo" class="side-logo pulse">
+  </div>    
+  
+  <div class="main-card"> 
+    <div class="logo-box">
+      <img src="SSU LOGO.jpg" alt="Sokoto State University" class="logo">
+    </div>
+    
+    <h1>Alhamdulillah</h1>
+    <div class="big-text">200 Level</div>
+    <div class="loading">Loading........ <span>99%</span></div>
+    <div class="congrats">Congratulations to all COMPUTER students</div>
+    <div class="credit">Designed by: Bin Aliyu</div>
+  </div>
+</body>
+</html>
